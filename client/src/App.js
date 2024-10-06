@@ -9,7 +9,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const chatEndRef = useRef(null);
 
-  const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+  const backendUrl = 'https://geminichatbot-rfk5.onrender.com' || 'http://localhost:5000';
 
 
   const askQuestion = async () => {
