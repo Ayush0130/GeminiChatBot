@@ -86,7 +86,7 @@ body {
 }
 
 .input-textarea {
-  flex: 1;
+  flex: 1; /* Allow textarea to take available space */
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -95,6 +95,19 @@ body {
   outline: none;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .input-box {
+    flex-direction: column; /* Stack elements vertically on mobile */
+  }
+
+  .input-textarea {
+    width: 100%; /* Full width on mobile */
+    min-height: 40px; /* Minimum height for better user experience */
+  }
+}
+
 
 .send-button {
   background-color: #007bff;

@@ -11,7 +11,7 @@ function App() {
   const [isRecording, setIsRecording] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const chatEndRef = useRef(null);
-  const backendUrl = 'http://localhost:5000';
+  const backendUrl = 'https://geminichatbot-rfk5.onrender.com';
   const [welcomeMessage, setWelcomeMessage] = useState('');
 
   //ask question function se start
@@ -91,7 +91,7 @@ function App() {
   }, [conversation]);
 
   useEffect(() => {
-    const welcomeMessageText = "Welcome to Gemini AI! Ask any question or upload a text or PDF file to get started.";
+    const welcomeMessageText = "Welcome to Gemini AI! Ask any question or upload a text or PDF file to get started. there will be a delay of 50 sec for first message";
     setWelcomeMessage(welcomeMessageText);
     setConversation([{ role: 'bot', content: welcomeMessageText }]);
 
